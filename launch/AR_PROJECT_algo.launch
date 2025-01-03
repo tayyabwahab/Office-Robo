@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <arg name="x" />
+    <arg name="y" />
+    <param name="des_pos_x" value="$(arg x)" />
+    <param name="des_pos_y" value="$(arg y)" />
+    <node pkg="AR_PROJECT" type="follow_wall.py" name="wall_follower" />
+    <node pkg="AR_PROJECT" type="go_to_point.py" name="go_to_point" />
+    <node pkg="AR_PROJECT" type="serviceAlgo.py" name="serviceAlgo" output="screen" />
+</launch>

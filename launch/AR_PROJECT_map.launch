@@ -1,0 +1,19 @@
+<launch>
+
+  <arg name="map_file" value="$(find AR_PROJECT)/maps/AR_PROJECT_map.yaml"></arg>  
+  <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)"></node>
+
+<param name="robot_description" command="$(find xacro)/xacro.py '$(find AR_PROJECT)/urdf/AR_PROJECT.xacro'"/>
+
+  <arg name="scan_topic"  default="/AR_PROJECT/laser/scan" />
+  <arg name="base_frame"  default="link_chassis"/>
+  <arg name="odom_frame"  default="odom"/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="False"/>
+  </node>
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"></node>
+  <node pkg="rviz" type="rviz" name="rviz"></node>
+
+</launch>
