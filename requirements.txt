@@ -1,0 +1,35 @@
+# Office-Robo: Autonomous Robot Navigation System
+# Python Dependencies
+
+# ROS Core Dependencies
+rospy>=1.15.0
+std_msgs>=0.5.0
+sensor_msgs>=1.13.0
+geometry_msgs>=1.13.0
+nav_msgs>=1.13.0
+tf>=1.12.0
+gazebo_msgs>=2.9.0
+std_srvs>=1.11.0
+
+# Python Standard Libraries (usually included with Python)
+# These are listed for reference but typically don't need explicit installation
+# math
+# time
+# sys
+# os
+
+# Additional Python Dependencies (if any custom packages are added)
+numpy>=1.19.0  # For advanced mathematical operations
+matplotlib>=3.3.0  # For plotting and visualization
+scipy>=1.5.0  # For scientific computing
+
+# Development Dependencies (optional)
+pytest>=6.0.0  # For testing
+flake8>=3.8.0  # For code linting
+black>=21.0.0  # For code formatting
+
+# Note: Most ROS packages are installed via apt-get and rosdep
+# This file primarily documents Python-specific dependencies
+# To install ROS dependencies, use:
+# sudo apt-get install ros-<distro>-<package-name>
+# rosdep install --from-paths src --ignore-src -r -y 
