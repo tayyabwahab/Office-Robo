@@ -15,8 +15,6 @@ Office-Robo is a comprehensive ROS (Robot Operating System) based autonomous rob
 ### 🎯 Key Algorithms
 - **Go-to-Point Algorithm**: Direct navigation to target coordinates
 - **Wall-Following Algorithm**: Intelligent obstacle avoidance using laser scan data
-- **State Machine**: Seamless switching between navigation modes
-- **Yaw Control**: Precise orientation control for accurate navigation
 
 ### 🛠️ Technical Features
 - **Laser Scanner Integration**: 720-degree laser scan for environment perception
@@ -63,18 +61,7 @@ The robot features a differential drive design with:
 - **Chassis**: 0.5m × 0.3m × 0.07m rectangular body
 - **Wheels**: Two independently controlled wheels for differential steering
 - **Caster Wheel**: Front caster for stability
-- **Laser Scanner**: 720-degree Hokuyo-style laser scanner mounted at the front
-- **Mass**: 5kg total weight with proper inertial properties
 
-### Sensor Configuration
-- **Laser Scanner**: 720-degree field of view, 10m maximum range
-- **Odometry**: Wheel encoder-based position tracking
-- **Regions**: Five defined regions for obstacle detection:
-  - Front (288-431°)
-  - Front-Left (432-575°)
-  - Front-Right (144-287°)
-  - Left (576-713°)
-  - Right (0-143°)
 
 ## Navigation Algorithms
 
@@ -246,7 +233,6 @@ The simulation world includes:
 
 ### Robot Model
 - **Differential Drive**: Two-wheel drive system
-- **Laser Scanner**: 720-degree Hokuyo-style scanner
 - **Collision Detection**: Proper collision geometry for all components
 - **Visual Representation**: Blue chassis with white laser scanner
 
@@ -320,35 +306,13 @@ rosservice list
 rosrun urdf_tutorial view_robot.py
 ```
 
-## Contributing
-
-### Development Guidelines
-1. Follow ROS coding standards
-2. Add proper documentation for new features
-3. Test algorithms in simulation before deployment
-4. Maintain backward compatibility
-
-### Adding New Features
-1. Create new Python scripts in `scripts/` directory
-2. Add corresponding launch files
-3. Update package dependencies
-4. Test thoroughly in simulation
-
 ## License
 
 This project is licensed under the TODO license - see the package.xml file for details.
 
-## Authors
-
-- **Maintainer**: abdullah120
-- **Email**: abdullah120@todo.todo
 
 ## Acknowledgments
 
 - ROS community for the excellent framework
 - Gazebo team for the simulation environment
 - Contributors to the navigation algorithms
-
----
-
-**Note**: This project is designed for educational and research purposes. Always test thoroughly in simulation before deploying on physical robots.
