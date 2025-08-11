@@ -56,28 +56,11 @@ Office-Robo/
 
 ## Robot Architecture
 
-### Physical Design
-The robot features a differential drive design with:
-- **Chassis**: 0.5m × 0.3m × 0.07m rectangular body
-- **Wheels**: Two independently controlled wheels for differential steering
-- **Caster Wheel**: Front caster for stability
-
 
 ## Navigation Algorithms
 
 ### 1. Go-to-Point Algorithm (`go_to_point.py`)
 **Purpose**: Direct navigation to target coordinates
-
-**States**:
-- **State 0**: Fix yaw orientation towards target
-- **State 1**: Move straight towards target
-- **State 2**: Target reached
-
-**Key Features**:
-- Yaw precision: ±2 degrees
-- Distance precision: 0.3 meters
-- Adaptive speed control
-- Real-time path correction
 
 ### 2. Wall-Following Algorithm (`follow_wall.py`)
 **Purpose**: Obstacle avoidance and wall following
