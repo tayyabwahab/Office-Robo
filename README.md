@@ -238,22 +238,6 @@ The robot divides its environment into five regions and makes navigation decisio
 3. **Wall Following**: Engages when obstacles block direct path
 4. **Path Recovery**: Returns to direct navigation when path clears
 
-## Performance Characteristics
-
-### Navigation Accuracy
-- **Position Precision**: ±0.3 meters
-- **Orientation Precision**: ±2 degrees
-- **Update Rate**: 20 Hz
-
-### Speed Parameters
-- **Linear Speed**: 0.2-0.6 m/s (adaptive)
-- **Angular Speed**: 0.2-0.7 rad/s (adaptive)
-- **Wall Following Speed**: 0.5 m/s
-
-### Sensor Performance
-- **Laser Range**: 0.15m to 10m
-- **Scan Frequency**: 40 Hz
-- **Angular Resolution**: 0.5 degrees
 
 ## Troubleshooting
 
